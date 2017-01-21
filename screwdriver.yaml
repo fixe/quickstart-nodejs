@@ -1,21 +1,6 @@
-workflow:
-  - publish
-
-shared:
-  image: node:6
-
 jobs:
   main:
+    image: node:6
     steps:
       - install: npm install
       - test: npm test
-
-  publish:
-    steps:
-      - foobar: echo 'hello'
-
-    secrets:
-      # We require our NPM Token to be available so that we can publish our package
-      # to the NPM Registry. Our secret is stored as "NPM_TOKEN", and is accessible
-      # in the build as an environment variable with the same name
-      - NPM_TOKEN
