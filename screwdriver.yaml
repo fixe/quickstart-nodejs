@@ -10,4 +10,5 @@ jobs:
         - test/second.test.js
     steps:
       - install: npm install
-      - test-{{FILE}}: npm test -- $FILE
+      - env: echo $NODE_VERSION
+      - test: npm test -- $FILE
