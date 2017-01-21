@@ -7,4 +7,4 @@ jobs:
         - test/second.test.js
     steps:
       - install: npm install
-      - test: npm test -- $FILE
+      - test-{{FILE}}: npm test -- $FILE
