@@ -2,7 +2,7 @@ jobs:
   main:
     image: node:6
     matrix:
-      FILE: [test/first.test.js, test/second.test.js]
+      FILE: [1,2]
     steps:
       - install: npm install
       - foobar: echo $FILE
