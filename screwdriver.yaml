@@ -5,5 +5,5 @@ jobs:
       FILE: [test/first.test.js, test/second.test.js]
     steps:
       - install: npm install
-      - foobar: env
+      - foobar: echo $FILE
       # - test: npm test -- {{FILE}}
